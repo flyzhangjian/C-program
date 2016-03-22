@@ -6,22 +6,31 @@
  ************************************************************************/
 
 #include<stdio.h>
-int main()
+int wanshu(int x)
 {
-    int x,i,j=0;
-    printf("please input your number:\n");
-    scanf("%d",&x);
-    for(i=1;i<x;i++)
+    int i=1,j=0;  
+    while(i<x)
     {
         if(x%i==0)
         {
             j=i+j;
         }
+        i++;   
     }
-    if (j==x)
-    printf("1\n");
+    if(j==x)
+    return 1;
     else
-    printf("0\n");
-    
+    return 0;
+}
+
+
+int main()
+{
+    int x;
+    for (x=1;x<=1000;x++)
+    {
+        if(wanshu(x)==1)
+        printf("%d\n",x);
+    }
     return 0;
 }
