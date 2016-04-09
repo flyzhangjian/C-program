@@ -42,4 +42,4 @@ int main()
         putchar('\n');
     }
     return 0;/*结束程序*/
-}mZ
+}
