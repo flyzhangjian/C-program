@@ -39,6 +39,7 @@ int main()
                 break;/*输出非空格*/
             }
         }
+        flag = 1;
         putchar('\n');
     }
     return 0;/*结束程序*/
