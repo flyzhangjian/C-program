@@ -65,4 +65,3 @@ int create_list(struct s_list **headp)
     *headp = loc_head;//使主函数头指针指向生成链表的第一个
     return i;//返回链表节点数
 }
-    
