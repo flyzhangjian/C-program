@@ -25,6 +25,7 @@ int main()
         putchar(p->c);
         p = p->next;
     }//遍历单项链表输出
+    putchar(p->c);
     putchar('\n');
     putchar('\n');
     sum++;
@@ -37,6 +38,8 @@ int main()
         p = p->next;
         result++;
     }//对动态生成的数组进行赋值
+    *result = p->c;
+    result++;
     *result='\0';
     printf("%s\n",ch);//输出
     return 0;
@@ -47,7 +50,7 @@ int create_list(struct s_list **headp)
     struct s_list *loc_head = NULL,*tail;
     char temp;
     int i=0;
-    if((temp=getchar())!=EOF)
+    if((scanf("%c",&temp)!=EOF))
     {
         loc_head = (struct s_list *)malloc(sizeof(struct s_list));
         loc_head->c = temp;
